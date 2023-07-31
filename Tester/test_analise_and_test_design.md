@@ -315,10 +315,10 @@ ___
 Пример текстового требования на раздел «Корзина»:
 <image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/basket.jpg?raw=true" alt="корзина">
 
+Пример текстового требования раздела "Поиск":
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/src.jpg?raw=true" alt="корзина">
+
 Пример требования на весь проект - [foodbuzz](https://docs.google.com/document/d/1-D5HPiVYN1fhEo_eEJVQ1kwkQ_NZd8scymr1YcY1qnA/edit?usp=sharing)
-
-Пример "Поиск":
-
 ___
 ### Схематичное описание
 ___

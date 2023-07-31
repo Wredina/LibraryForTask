@@ -494,7 +494,13 @@ ___
 #### Определяем страницы сайта или экраны мобильного приложения для блока
 ___
 
-Рассмотрим раздел «Блог». Согласно [документации](https://docs.google.com/document/d/1-D5HPiVYN1fhEo_eEJVQ1kwkQ_NZd8scymr1YcY1qnA/edit), в этом разделе две страницы:
+Рассмотрим раздел «Блог». 
+
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/fud_block_1.jpg?raw=true" alt="foodbuzz block 1">
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/fud_block_2.jpg?raw=true" alt="foodbuzz block 2">
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/fud_block_3.jpg?raw=true" alt="foodbuzz block 3">
+
+Согласно [документации](https://docs.google.com/document/d/1-D5HPiVYN1fhEo_eEJVQ1kwkQ_NZd8scymr1YcY1qnA/edit), в этом разделе две страницы:
 
 1. Наш блог
 2. Страница опубликованного поста
@@ -544,6 +550,8 @@ ___
 Проведем аналогичную последовательность действий для раздела «Поиск». Важно
 учесть, что у раздела есть два разных состояния — работа с интернет-соединением
 и работа без интернет-соединения. 
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/src.jpg?raw=true" alt="Поиск">
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/src_no_internet.jpg?raw=true" alt="Поиск">
 
 В итоге получаем такой вариант декомпозиции:
 <image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/src_mind_map.jpg?raw=true" alt="Mind Map foodbuzz src internet">

@@ -317,6 +317,9 @@ ___
 
 Пример текстового требования раздела "Поиск":
 <image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/src.jpg?raw=true" alt="корзина">
+<image src="https://github.com/Wredina/LibraryForTask/blob/main/Tester/img%20test_des_and_analise/src_no_internet.jpg?raw=true" alt="корзина">
+
+Тут уже отображено, что будет при потери интернет соединения.
 
 Пример требования на весь проект - [foodbuzz](https://docs.google.com/document/d/1-D5HPiVYN1fhEo_eEJVQ1kwkQ_NZd8scymr1YcY1qnA/edit?usp=sharing)
 ___
@@ -328,3 +331,5 @@ ___
 
 Если нужно максимально полно описать функциональность, схематическое
 описание может дополняться текстовым.
+
+[Карта функциональности "Поиск"](https://miro.com/welcomeonboard/NjJ5NEw0UkdyZE8yZ1FOaGZWS3NiSmVvRno1bUZBSmdaQmN1Z3U4aHBydlg2elFTUENocFBQS0pvSUlDVVk2c3wzNDU4NzY0NTIzNjY0NTMwNzM2?share_link_id=282913234314)

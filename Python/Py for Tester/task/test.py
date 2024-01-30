@@ -84,18 +84,9 @@
 
 # print(generate_boards())
 
-from super_module import *
+import random
+from sys import argv
 
-SIZE = 49.5
-
-print(f'{SIZE = }\n{result = }')
-print(f'{z = }')  # NameError: name 'z' is not defined
-print(f'{_secret = }')  # NameError: name '_secret' is not defined
-print(f'{func(100, 200) = }\n{randint(10, 20) = }')
-
-
-def func(a: int, b: int) -> int:
-    return a + b
-
-
-print(f'{func(100, 200) = }')
+print(random.uniform(int(argv[1]), int(argv[2])))
+print(random.randrange(int(argv[1]), int(argv[2]), int(argv[1])))
+print(random.sample(range(int(argv[1]), int(argv[2]), int(argv[1])), 10))

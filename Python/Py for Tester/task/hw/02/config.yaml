@@ -1,0 +1,11 @@
+folder_in: D:\программирование\MyBibliotecForTask\Python\Py for Tester\task\hw\02\in
+folder_out1: D:\программирование\MyBibliotecForTask\Python\Py for Tester\task\hw\02\out1
+folder_out2: D:\программирование\MyBibliotecForTask\Python\Py for Tester\task\hw\02\out2
+folder_out3: D:\программирование\MyBibliotecForTask\Python\Py for Tester\task\hw\02\out3
+count_test_files: 10
+length_name_file: 5
+bs: 1M
+type: zip
+arc_type: zip
+stat_file_path: D:\программирование\MyBibliotecForTask\Python\Py for Tester\task\hw\02\7z_logs\stat.txt
+logging_file_path: D:\программирование\MyBibliotecForTask\Python\Py for Tester\task\hw\02\7z_logs\7z_logs_checkers_def.log

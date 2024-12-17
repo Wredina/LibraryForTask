@@ -1,0 +1,117 @@
+// промо-акции
+.promo{
+    padding: 0 16px 0 378px;
+
+    &__container{
+        background-image: url(../img/promo_header/promo_1.jpeg);
+        @include flex_row(space-between, flex-start);
+        background-repeat: no-repeat;
+        background-size: cover;   
+    }
+
+    &__flag{
+        margin-top: 18px;
+        padding: 4px 16px 4px 14px;
+        background-image: url(../img/icon/flags/red_big.png);
+        background-size: contain;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: $color_text_on_bacground;
+    }
+    
+    &__info{
+        background-color: $color_brand;
+        @include flex_column(center, flex-start);
+        padding: 32px 54px 58px;
+        width: 398px;
+        border-radius: 0 6px 6px 0;
+
+        &__title{
+            font-family: "M PLUS Rounded 1c";
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 26px;
+            color: $color_text_on_bacground;
+        }
+
+        &__sum{
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            color: $color_text_on_bacground;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        &__format{
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            color: $color_text_on_bacground;
+            margin-bottom: 10px
+        }
+
+        &__delivery{
+            @include flex_row(flex-start,center);
+            width: 100%;
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 14px;
+            gap: 28px;
+            margin-bottom: 34px;
+
+            &__price{
+                color: $color_text_on_bacground;
+                text-decoration: underline;
+            }
+
+            &__presence{
+                color: $color_text_on_bacground;
+                text-decoration: underline;
+            }
+        }
+
+        &__price{
+            font-family: Roboto;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 30px;
+            color: $color_text_on_bacground;
+
+            &_valute{
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 0px;
+            }
+        }
+
+        &__buttons{
+            @include flex_row(flex-start, center);
+            gap: 10px;
+            margin-top: 14px;
+
+            &__buy{
+                padding: 8px 18px;
+                background-color: $color_button_on_bacgraund;
+                border-radius: 6px;
+            }
+
+            &__cart{
+                display: flex;
+                padding: 5px 18px;
+                border: 1px solid $color_button_on_bacgraund;
+                border-radius: 6px;
+            }
+
+            &__cart path{
+                fill: $color_button_on_bacgraund;
+            }
+        }
+    }
+}

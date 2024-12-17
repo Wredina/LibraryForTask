@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+.menu :first-child .menu__link{
+    text-decoration: underline;
+}
+
+.menu :last-child .menu__link{
+    font-weight: bold;
+}
+
+.menu :nth-child(3) .menu__link{
+    background-color: orange;
+}

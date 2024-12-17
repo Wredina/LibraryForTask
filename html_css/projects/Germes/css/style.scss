@@ -1,0 +1,24 @@
+// основные настройки страниц + миксины + переменные
+@import "option/basic";
+@import "option/mixins";
+@import "option/vars";
+
+// статичные объекты (хедер, футер, карточки товара)
+@import "pages/static/header";
+@import "pages/static/items";
+@import "pages/static/padding";
+
+// страницы
+@import "pages/home";
+@import "pages/category";
+@import "pages/products";
+@import "pages/about";
+@import "pages/contacts";
+@import "pages/delivery";
+@import "pages/payment";
+@import "pages/vacancies";
+@import "pages/vacancy";
+@import "pages/cart";
+@import "pages/favorites";
+@import "pages/galery";
+@import "pages/article";

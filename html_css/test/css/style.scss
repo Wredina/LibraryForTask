@@ -1,0 +1,23 @@
+// миксины, обнуление стилей + общее центрирование, переменные
+@import "func/mixins";
+@import "func/basic";
+@import "func/vars";
+
+// шапка и подвал
+@import "files/header";
+@import "files/footer";
+
+// главная страница
+@import "files/content/home";
+
+// корзина
+@import "files/content/cart";
+
+// каталог
+@import "files/content/catalog";
+
+// продукт
+@import "files/content/product";
+
+// регистрация
+@import "files/content/registration";

@@ -1,0 +1,256 @@
+.header{
+    position: relative;
+    background-image: url(img/background/topSection.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container{
+        background-image: url(img/demo/header.jpeg);
+        @include flex_column(space-between,stretch);
+        padding: 40px 68px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+    }
+// хэдэр
+    &__top{
+        @include flex_row(space-between,center);
+
+        &__logo{
+            max-width: 160px;
+        }
+// навигация
+        &__nav{
+            @include flex_row(center,center);
+            gap: 40px;
+
+            &__list{
+                font-family: 'DIN 2014';
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $color_link;
+            }
+
+            &__list:hover{
+                color: $color_link_hover;
+            }
+        }
+// изображение бургера
+        &__burger{
+            display: none;
+        }
+// мобильное меню
+        &__mobile{
+            display: none;
+        }
+
+    }
+// название выставки и дата
+    &__name{
+        @include flex_column(center,center);
+
+        &__container{
+            padding-left: 186px;
+        }
+
+        &__subtitle{
+            font-family: "DIN 2014";
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 71px;
+            color: $color_title_black_theme_standart;
+            padding-left: 8px;
+        }
+
+        &__title{
+            font-family: "DIN 2014";
+            font-size: 160px;
+            font-weight: 700;
+            line-height: 120px;
+            letter-spacing: 24px;
+            color: $color_title_black_theme_standart;
+            
+            &_style{
+                color: #2C302F;
+            }
+        }
+
+        &__date{
+            text-align: right;
+            font-family: "DIN 2014";
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 77px;
+            color: $color_title_black_theme_standart;
+            padding-right: 30px;
+        }
+    }
+// подпись внизу
+    &__bottom{
+        @include flex_row(space-between,center);
+    }
+// изображение подписи
+    &__slogan-img{
+        max-width: 302px;
+        max-height: fit-content;
+    }
+// описание выставки
+    &__slogan{
+        max-width: 602px;
+
+        &__title{
+            font-family: "DIN 2014";
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px;
+            text-transform: uppercase;
+            color: $color_title_black_theme_accent;
+
+            &_style{
+                color: $color_title_black_theme_standart;
+            }
+        }
+
+        &__text{
+            @include text();
+            color: $color_text_black_theme;
+            margin-top: 12px;
+        }
+    }
+}
+// описание выставки для 1220px
+.header__slogan__text__mobile{
+    display: none;
+}
+
+// переход на мобильную версию
+@media (max-width: 1220px){
+    .header{
+        background-image: none;
+// изменение паддингов в контейнере и позиционирование фона
+        &__container{
+            padding: 12px 16px 18px;
+            background-size: cover;
+            background-position: top;
+        }
+// хэдэр
+        &__top{
+            &__logo{
+                max-width: 120px;
+            }
+// скрытые стандартной навигации
+            &__nav{
+                display: none;
+            }
+// вывод изображения бургера
+            &__burger{
+                display: block;
+            }
+// мобильное меню
+            &__mobile{
+                display: none;
+                background: $color_background_mobile_menu;
+                background-blend-mode: overlay;
+                background-image: url(img/demo/header.jpeg);
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                z-index: 2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                padding: 12px 16px;
+
+                &__head{
+                    @include flex_row(space-between, center);
+                }
+
+                &__head-logo{
+                    max-width: 120px;
+                }
+
+                &__nav{
+                    @include flex_column(flex-start, flex-start);
+                    gap: 40px;
+                    margin-top: 58px;
+                }
+
+                &__nav-list{
+                    font-family: "DIN 2014";
+                    font-size: $size_link_m;
+                    font-weight: $weight_link_l;
+                    line-height: $height_link_s;
+                    color: #F8F6F2;;
+                }
+            }
+        }
+// изменение позиционирования и цвета названия выставки
+        &__name{
+
+            &__container{
+                padding: 0;
+            }
+
+            &__title{
+
+                &_style{
+                    color: $color_title_black_theme_standart;
+                }
+            }
+        }
+// позиционирование изображения подписи
+        &__bottom{
+            align-self: center;
+        }
+// скрытие описания выставки
+        &__slogan{
+            display: none;
+        }
+    }
+// вывод описания выставки под основной секцией хэдэра
+    .header__slogan__text__mobile{
+        padding: 24px 16px 30px;
+        background-image: url(img/background/topSection.jpeg);
+        display: block;
+    }
+}
+
+// изменение размера названия выставки
+@media (max-width: 768px) {
+    .header{
+
+        &__name{
+            &__subtitle{
+                font-size: 44px;
+                font-weight: 800;
+                line-height: 56px;
+                padding-left: 4px;
+            }
+
+            &__title{
+                font-size: 72px;
+                font-weight: 700;
+                line-height: 92px;
+                line-height: 68px;
+                letter-spacing: 12px;
+            }
+
+            &__date{
+                font-size: 28px;
+                font-weight: 400;
+                line-height: 36px;
+                padding-right: 26px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

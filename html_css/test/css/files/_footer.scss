@@ -1,0 +1,159 @@
+// блок с отзывом
+.feedback{
+
+    background-image: url(../img/bcg/bcg_1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    &__container{
+        @include flex(row, nowrap);
+        align-items: center;
+        justify-content: center;
+        gap: 224px;
+        padding: 98px 0 126px;
+    }
+
+    &__users{
+        max-width: 360px;
+        text-align: center;
+    }
+
+    &__avatar{
+        width: 100px;
+        margin-bottom: 24px;
+    }
+
+    &__comment{
+        font-style: italic;
+        @include font_text(20px, $txt_weight, 24px);
+        color: $title_color;
+    }
+
+    // секция с инпутом
+
+    &__mail{
+        text-align: center;
+    }
+
+    &__title{
+        @include font_text(24px, 700, 24px);
+        color: $title_color;
+    }
+
+    &__subtitle{
+        @include font_text(18px, $txt_weight, 16px);
+        margin: 8px 0 32px 0;
+    }
+
+    &__input-form{
+        display: flex;
+        width: 348px;
+    }
+
+    &__form{
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        background: rgb(225, 225, 225);
+        border-radius: 28px 0 0 28px;
+        height: 48px;
+        width: 320px;
+        padding: 6px 0 6px 22px;
+        border: 0;
+        color: $title_color;
+    }
+
+    &__btn{
+        border-radius: 0 28px 28px 0;
+        height: 48px;
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        border: 0;
+        background-color: $brend_color;
+        padding: 16px;
+        color: $dop_text_color;
+    }
+}
+
+.footer{
+    background-color: $bg_color;
+
+    &__container{
+        @include flex(row,nowrap);
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+    }
+
+    &__copy{
+        @include font_text(16px, $txt_weight, 19px);
+        color: $dop_text_color;
+    }
+    
+    &__social{
+        @include flex(row,nowrap);
+        gap: 8px;
+    }
+
+    &__icon{
+        background-color: $icon_header_color;
+        display: flex;
+
+        :hover{
+            background-color: $brend_color;
+        }
+
+    }
+
+   &__icon:hover path{
+    fill: $icon_header_color;
+   }
+
+}
+
+@media (max-width: 769px) {
+    .feedback{
+        background-image: url(../img/bcg/bcg_2.jpeg);
+
+        &__container{
+            @include flex(column, nowrap);
+            padding: 53px 16px 140px 16px;
+            gap: 48px;
+        }
+    }
+
+    .footer{
+        &__container{
+            padding: 24px 32px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+
+    .feedback{
+        background-image: url(../img/bcg/bcg_3.jpeg);
+
+        &__container{
+            padding: 54px 6px 108px 6px;
+        }
+
+        &__comment{
+            font-size: 18px;
+        }
+
+        &__subtitle{
+            font-size: 14px;
+        }
+
+        &__input-form{
+            padding: 0 8px 0 8px;
+        }
+    }
+
+    .footer{
+        &__container{
+            @include flex(column-reverse, nowrap);
+            gap: 40px;
+            padding: 40px 0 9px 0;
+        }
+    }
+}

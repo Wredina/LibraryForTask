@@ -1,0 +1,300 @@
+.crumbs{
+    background-color: $brend_bg_color;
+
+    &__container{
+        @include flex(row, nowrap);
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    &__title{
+        @include font_text(24px, $txt_weight, 29px);
+        color: $brend_color;
+    }
+
+    &__list{
+        @include flex(row, nowrap);
+        align-items: center;
+    }
+
+    &__li:not(:last-child)::after{
+        content: '/';
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        color: $text_color;
+        padding-right: 4px;
+    }
+
+    &__link{
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        color: $text_color;
+    }
+
+    &__li:last-child .crumbs__link{
+        color: $brend_color;
+    }
+}
+
+.filter{
+    @include flex(row, nowrap);
+    justify-content: center;
+    align-items: center;
+    padding: 51px 0 64px;
+    position: relative;
+
+    // основной фильтр
+
+    &__basic{
+        position: absolute;
+        top: 39px;
+        left: 0;
+        z-index: 2;
+    }
+
+    &__basic[open]{
+            background-color: #FFFFFF;
+            box-shadow: 4px 4px 31px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    &__title{
+        @include font_text($txt_size, 600, $txt_height);
+        @include flex(row, nowrap);
+        align-items: center;
+        gap: 11px;
+        color: $text_color;
+        padding: 13px 0 16px 16px;
+
+        path{
+            fill: $text_color;
+        }
+
+    }
+
+    &__basic[open]>&__title{
+        color: $brend_color;
+
+        path{
+            fill: $brend_color;
+        }
+    }
+
+    // навигация в основном фильтре
+
+    &__nav{
+        padding: 13px 16px;
+        @include flex(column,nowrap);
+        gap: 18px;
+        width: 360px;
+    }
+
+    &__name{
+        @include font-text($txt_size, $txt_weight, $txt_height);
+        border-left: solid 5px $brend_color;
+        padding: 8px;
+        border-bottom: solid 1px #EBEBEB;
+    }
+
+    &__category[open]>&__name{
+        color: $brend_color;
+        border-bottom: double 1px $brend_color;
+    }
+
+
+    &__products{
+        @include flex(row, nowrap);
+    }
+
+    &__list{
+        padding: 24px 0 24px 16px;
+        @include flex(column, nowrap);
+        gap: 11px;
+        @include font_text($txt_size, $txt_weight, $txt_height);
+    }
+
+    &__link{
+        color: $text_color;
+    }
+
+    &__link:hover{
+        color: $brend_color;
+    }
+}
+
+    // сортировка продуктов
+
+.sort{
+        @include flex(row,nowrap);
+        gap:28px;
+        width: 360px;
+
+        &__details{
+            position: relative;
+        }
+
+        &__title{
+            @include font_text($txt_size, $txt_weight, $txt_height);
+            @include flex(row, nowrap);
+            align-items: center;
+            gap: 10px;
+            color: $text_color;
+
+            path{
+                fill: $text_color;
+            }
+        }
+
+        &__list{
+            position: absolute;
+            background: rgb(255, 255, 255);
+            box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+            z-index: 2;
+            width: 78px;
+            padding: 8px;
+            @include flex(column, nowrap);
+            gap: 8px;
+            top:22px;
+            left:-8px;
+        }
+
+        &__check{
+            display: none;
+        }
+
+        &__check:checked + .sort__check-name::before{
+            background-color: #007bff;   
+        }
+        
+
+        &__check-name::before{
+            content: '';
+            display: inline-block;
+            border: 1px solid #EBEBEB;
+            width: 13px;
+            height: 13px;
+        }
+
+        &__check-name{
+            @include font_text($txt_size, $txt_weight, $txt_height);
+            color: $text_color;
+            display: flex;
+            align-items: center;
+            gap:10px;
+        }
+}
+
+// счётчик страниц товаров
+
+.counting{
+    margin-bottom: 96px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &__container{
+        @include flex(row,nowrap);
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        height: 44px;
+        gap: 16px;
+        max-width: 282px;
+        border: solid 1px #EBEBEB;
+        border-radius: 10%;
+    }
+
+    &__pointer{
+        display: flex;
+        width: 8px;
+
+        path{
+            fill: $title_color;
+        }
+    }
+
+    &__pointer:hover path{
+        fill: $brend_color;
+    }
+
+    &__list{
+        @include flex(row,nowrap);
+        gap: 16px;
+    }
+
+    &__link{
+        color: $text_color;
+        @include font-text(16px, 300, 19px);
+    }
+
+    &__link:hover{
+        color: $brend_color;
+    }
+}
+
+@media (max-width:769px){
+    .crumbs{
+
+        &__container{
+            padding: 60px 16px;
+        }
+    }
+
+    .filter{
+        padding: 24px 6px 40px 6px;
+        justify-content: flex-end;
+
+        &__basic{
+            top: 11px;
+        }
+    }
+
+    .sort{
+        justify-content: flex-end;
+    }
+
+    .card__location:last-child{
+        display: none;
+    }
+}
+
+@media (max-width:376px){
+    .crumbs{
+
+        &__container{
+            padding: 24px 0 46px;
+            @include flex(column, nowrap);
+            gap: 32px;
+        }
+    }
+
+    .filter{
+
+        &__basic{
+            top: 8px;
+        }
+
+        &__span{
+            display: none;
+        }
+
+        &__title{
+            padding: 13px 0 16px 6px;
+        }
+
+        &__title svg{
+            height: 25px;
+            width: 38px;
+        }
+
+        &__title path{
+            fill: #000000;
+        }
+    }
+
+    .sort{
+        gap: 18px;
+
+        &__details{
+            @include font_text(12px, $txt_weight, 14px);
+        }
+    }
+}

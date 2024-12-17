@@ -1,0 +1,808 @@
+.header{
+    padding: 29px 24px 28px 36px;
+    @include flex_row(space-between, center);
+    gap: 150px;
+    position: relative;
+
+    &__logo{
+        max-width: 200px;
+    }
+
+    &__nav-container{
+        width: 1040px;
+        @include flex_row(space-between, center);
+    }
+
+    &__nav{
+        @include flex_row(space-between, center);
+        width: 560px;
+    }
+
+    &__nav-link{
+        @include text_rb($size_link_medium, $weight_link_medium, $height_link_medium);
+        color: $color_text;
+    }
+
+    &__icons{
+        @include flex_row(center,center);
+        gap: 42px;
+    }
+
+    &__contacts{
+        @include flex_column(center,center);
+    }
+
+    &__phone{
+        @include text_rb($size_link_xxl, $weight_link_medium, $height_link_xxl);
+        color: $color_title;
+        letter-spacing: 0.6px;
+    }
+
+    &__ring{
+        @include text_rb($size_link_small, $weight_link_medium, $height_link_small);
+        color: $color_brand;
+        text-decoration: underline;
+    }
+
+    &__phone-img{
+        display: none;
+    }
+}
+
+// попап
+.popup{
+    position: absolute;
+    top: 150%;
+    right: 30%;
+    box-shadow: 0px 3.87px 24.99px 0px rgba(86, 97, 203, 0.31);
+    border-radius: 16.66px;
+    @include flex_column(center, center);
+    padding: 44px 58px 56px;
+    // спрятанный контент
+    display: none;
+
+    &__close{
+        @include flex_row(flex-end,center);
+        position: relative;
+        width: 100%;
+    }
+
+    &__close-img{
+        position: absolute;
+        top: -34px;
+        right: -46px;
+        display: flex;
+    }
+
+    &__title{
+        @include text_sf($size_title_medium, $weight_title_medium, $height_title_medium);
+        color: $color_title;
+    }
+
+    &__form-input{
+        @include flex_column(center,center);
+        gap: 16px;
+        margin-top: 34px;
+    }
+
+    &__inputs{
+        position: relative;
+    }
+
+    &__input{
+        border-radius: 6px;
+        background: #F2F3F7;
+        border: none;
+        @include text_rb ($size_input_small, $weight_input_medium, $height_input_small);
+        color: $color_text_input;
+        letter-spacing: 0.5px;
+        padding: 13px 18px;
+        width: 309px;
+    }
+
+    &__inputs-img{
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        display: flex;
+    }
+
+    &__politics{
+        margin: 18px 0;
+        display: flex;
+    }
+
+    &__politics-security{
+        @include text_rb ($size_title_xs, $weight_title_xs, $height_title_xs);
+        color: $color_text_opacity;
+        @include flex_row(center,center);
+    }
+
+    &__link-politics-security{
+        @include text_rb ($size_title_xs, $weight_title_xs, $height_title_xs);
+        color: $color_brand;
+        margin-right: 38px;
+        margin-left: 3px;
+    }
+
+    &__check{
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $color_text_opacity;
+        border-radius: 3.17px;
+    }
+
+    &__check:checked{
+        content: '';
+        background-image: url('../img/icon/check.svg');
+        background-repeat: no-repeat;
+        transition: 0.3s;
+        background-position-y: 2px;
+    }
+
+    &__button{
+        padding: 10px 114px;
+        background-color: $color_button;
+        color: $color_text_on_bacground;
+        border-radius: 4.43px;
+        border: none;
+    }
+
+}
+
+// выпадающий список бургера
+.dropdown{
+    display: none;
+}
+
+.hr-top{
+    border: 1px solid #E0E0E0;
+}
+
+// нижний хэдер
+.header-bottom{
+    padding: 16px 24px 16px 36px;
+
+    &__container{
+        @include flex_row(space-between,center);
+    }
+
+    &__title{
+        @include text_rb($size_link_medium, $weight_link_big, $height_link_medium);
+        color: $color_text;
+        text-transform: uppercase;
+
+        &_promo{
+            color: $color_text_promo;
+        }
+    }
+
+    &__search-container{
+        position: relative;
+    }
+
+    &__search-input{
+        border: 1px solid $color_input_border;
+        border-radius: 6px;
+        padding: 12px 14px;
+        @include text_rb($size_input_small, $weight_input_big, $height_input_small);
+        color: $color_text_opacity;
+        width: 248px;
+    }
+
+    &__search-loup{
+        position: absolute;
+        top: 1px;
+        right: 0;
+        display: flex;
+        padding: 10px 16px;
+    }
+
+    &__button{
+        padding: 10px 34px;
+        background-color: $color_button;
+        border-radius: 6px;
+        color: $color_button_on_bacgraund;
+        @include text_rb ($size_button_big, $weight_button, $height_button_big);
+    }
+
+    // поиск для 960px
+    &__icon-search{
+        display: none;
+    }
+}
+
+// бургер в нижнем хэдере
+.burger{
+    position: relative;
+
+    &__title{
+        width: 300px;
+        background-color: $color_brand;
+        border-radius: 4px;
+        @include flex_row(flex-start,center);
+        padding: 8px 14px;
+        gap: 34px;
+        @include text_rb($size_button_big, $weight_button, 20px);
+        color: $color_button_on_bacgraund;
+
+        &__hide{
+            display: none;
+        }
+    }
+
+//каталог 
+    &__nav{
+        position: absolute;
+        top: 36px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: 0px 1px 10px 0px rgba(208, 208, 208, 0.25);
+        width: 300px;
+        padding: 28px 16px 28px 16px;
+        z-index: 1;
+    }
+
+    &__nav[open]{
+        border-radius: 4px 0 0 4px;
+    }
+
+    
+    &__list{
+        position: relative;
+        @include flex_column(center, flex-start);
+        gap: 12px;
+    }
+
+    &__li{
+        width: 100%;
+    }
+
+    &__li-title{
+        @include text_rb($size_link_small, $weight_link_medium, $height_link_small);
+        @include flex_row(space-between, center);
+        color: $color_text_nav;
+
+        &_promo{
+            color: $color_promo;
+        }
+    }
+
+    &__li[open]>summary{
+        color: $color_brand;
+    }
+
+    &__li[open]>summary path{
+        fill: $color_brand;
+    }
+
+    &__hover{
+        position: absolute;
+        top: -26px;
+        right: -476px;
+        background-color: #FFFFFF;
+        border-radius: 0 4px 4px 0;
+        box-shadow: 0px 1px 10px 0px rgba(208, 208, 208, 0.25);
+        padding: 28px 16px 62px 40px;
+        width: 460px;
+        border-left: 1px solid #D0D0D0;
+        z-index: 1;    
+    }
+
+    &__title-hover{
+        @include text_rb(18px, $weight_title_xs, 21px);
+        color: $color_brand;
+        margin-bottom: 16px;
+    }
+
+    &__list-hover{
+        @include flex_column(center, flex-start);
+        gap: 12px;
+    }
+
+    &__link-hover{
+        @include text_rb($size_link_small, $weight_link_medium, $height_link_small);
+        color: $color_text_nav;
+    }
+    
+}
+
+
+
+// медяхи
+
+@media (max-width: 1280px) {
+    .header{
+        gap: 106px;
+
+        &__nav{
+            @include flex_row(space-between, center);
+            max-width: 483px;
+        }
+
+        &__icons{
+            gap: 18px;
+        }
+
+        &__phone{
+            @include text_rb($size_link_xl, $weight_link_medium, $height_link_xl);
+            color: $color_title;
+            letter-spacing: normal;
+        }
+
+        &__ring{
+            @include text_rb($size_link_exstra-small, $weight_link_medium, $height_link_exstra-small);
+            color: $color_brand;
+        }
+    }
+}
+
+@media (max-width:1120px){
+    .burger{
+        &__title{
+            width: 228px;
+            gap: 18px;
+        }
+
+        &__nav{
+            width: 228px;
+        }
+
+        &__hover{
+            width: 348px;
+            right: -364px;
+            padding: 28px 16px 81px 16px;
+        }
+    }
+
+    .header-bottom{
+        &__title{
+            @include text_rb($size_link_exstra-small, $weight_link_big, $height_link_exstra-small);
+        }
+
+        &__search-input{
+            width: 204px;
+        }
+
+        &__button{
+            padding: 8px 28px;
+            @include text_rb($size_button_small, $weight_button, $height_button_small);
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .header{
+        gap: 52px;
+        padding: 24px 19px 25px 22px;
+
+        &__logo{
+            max-width: 158px;
+        }
+
+        &__nav{
+            max-width: 391px;
+        }
+
+        &__nav-link{
+            @include text_rb($size_link_small, $weight_link_medium, $height_link_medium);
+            color: $color_text;
+        }
+    }
+}
+
+@media (max-width: 960px){
+    .header{
+
+        &__nav{
+            width: 318px;
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .header{
+        padding: 14px 20px 12px;
+
+        &__logo{
+            width: 134px;
+        }
+
+        &__nav-container{
+            @include flex_row(flex-end, center);
+            gap: 35px;
+            width: auto;
+        }
+
+        &__nav{
+            display: none;
+        }
+
+        &__icons{
+            display: none;
+        }
+
+        &__ring{
+            display: none;
+        }
+    }
+
+    .dropdown{
+        display: block;
+        position: relative;
+
+        &__small{
+            display: none;
+        }
+    
+        &__container{
+            position: absolute;
+            width: 560px;
+            top: 40px;
+            right: -12px;
+            box-shadow: 0px 3.87px 24.99px 0px rgba(86, 97, 203, 0.31);
+            z-index: 2;
+            background-color: $color_button_on_bacgraund;
+            border-radius: 16px;
+        }
+    
+        &__header{
+            padding: 16px;
+            @include flex_row(space-between, center);
+        }
+    
+        &__logo-img{
+            width: 108px;
+        }
+    
+        &__option{
+            @include flex_row(center, center);
+            gap: 18px;
+        }
+    
+        &__phone, &__close{
+            border: 1px solid $color_brand;
+            display: flex;
+        }
+    
+        &__phone{
+            padding: 6px 6px;
+        }
+    
+        &__close{
+            padding: 4px 4px;
+        }
+        
+    
+        &__cart{
+            position: relative;
+            margin-right: 14px;
+    
+            &_counter{
+                position: absolute;
+                top: 0;
+                right: -12px;
+                @include text_rb($size_text_medium, $weight_text_big, $height_text_medium);
+                color: $color_text;
+            }
+        }
+        
+        &__hr{
+            border: 1px solid #E0E0E0;
+        }
+    
+        &__content-container{
+            padding: 16px;
+            @include flex_column(center, flex-start);
+            gap: 16px;
+        }
+    
+        &__city-container{
+            @include flex_row(flex-start, center);
+            gap: 2px;
+        }
+    
+        &__title{
+            @include text_rb($size_text_small, $weight_text_big, $height_text_small);
+            color: $color_text;
+        }
+    
+        &__city{
+            @include text_rb($size_link_xs, $weight_link_big, $height_link_xs);
+            color: $color_brand;
+            text-decoration: underline 2px;
+            @include flex_row(flex-start, center);
+            gap: 6px;
+        }
+    
+        &__city path{
+            fill: $color_brand;
+        }
+    
+        &__inpit-search{
+            position: relative;
+            width: 100%;
+        }
+    
+        &__input{
+            border: none;
+            background-color: #F2F3F7;
+            padding: 12px 16px;
+            width: 100%;
+            border-radius: 4px;
+            @include text_rb ($size_input_small, $weight_input_medium, $height_input_small);
+            color: $color_text_input;
+            letter-spacing: 0.5px;
+        }
+    
+        &__search-img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px 16px;
+            display: flex;
+        }
+    
+        &__calc{
+            width: 100%;
+            padding: 8px 0;
+            text-align: center;
+            @include text_rb($size_link_small, $weight_link_big, $height_link_exstra-small);
+            color: $color_brand;
+            @include flex_row(center,center);
+            gap: 12px;
+            border: 1px solid $color_brand;
+            border-radius: 4px;
+        }
+    
+        &__calc path{
+            stroke: $color_brand;
+        }
+    
+        &__nav-list{
+            @include flex_column(center, flex-start);
+            gap: 16px;
+        }
+    
+        &__nav-link{
+            @include text_rb($size_link_small, $weight_link_medium, $height_link_exstra-small);
+            color: $color_text;
+        }
+    
+        &__button{
+            padding: 10px 16px;
+            width: 100%;
+            border-radius: 4px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+    
+        &__ring{
+            border: none;
+            background-color: $color_button;
+            @include text_rb ($size_link_small, $weight_link_medium, $height_link_exstra-small);
+            color: $color_text_on_bacground;
+        }
+    
+        &__wholesale{
+            @include text_rb ($size_link_small, $weight_link_medium, $height_link_exstra-small);
+            color: $color_title;
+            border: 1.5px solid $color_brand;
+        }
+    
+    }
+
+    .hr-top{
+        display: none;
+    }
+
+    .header-bottom{
+        padding: 4px 8px;
+
+        &__search-container,
+        &__button{
+            display: none;
+        }
+
+        &__container{
+            gap: 1px;
+        }
+        
+
+        &__container a:not(:first-child){
+            flex-grow: 1;
+            background-color: $color_brand;
+            text-align: center;
+        }
+
+        &__title{
+            padding: 10px 0;
+            color: $color_button_on_bacgraund;
+            font-weight: $weight_link_medium;
+            text-transform: none;
+        }
+
+        &__icon-search{
+            @include flex_row(center,center);
+            padding: 18px 0;
+            border-radius: 0 4px 4px 0;
+            position: relative;
+        }
+
+        &__icon-search svg{
+            position: absolute;
+        }
+
+        &__icon-search path{
+            fill: $color_button_on_bacgraund;
+        }
+    }
+
+    .burger{
+
+        &__title{
+            @include text_rb($size_button_medium, $weight_button,20px);
+            border-radius: 4px 0 0 4px;
+
+            &__hide{
+                display: inline;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 590px) {
+    .dropdown__container{
+        max-width: 460px;
+    }
+
+    .header-bottom{
+        &__container{
+            gap: 0;
+        }
+
+        &__container a:not(:first-child){
+            flex-grow: 0;
+        }
+
+        &__title{
+            display: none;
+            @include text_rb($size_button_small, $weight_button,$height_button_small);
+        }
+
+        &__icon-search{
+            padding: 18px;
+        }
+    }
+
+    .burger{
+        width: 100%;
+
+        &__title{
+            width: 100%;
+        }
+
+        &__title-text{
+            width: 100%;
+            text-align: center;
+        }
+
+        &__nav{
+            width: 100%;
+        }
+
+        &__hover{
+            position: static;
+            width: 100%;
+            padding: 0;
+            border-left: none;
+            padding: 4px 0 4px 10px;
+        }
+
+        &__title-hover{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .header{
+        padding: 14px 20px 12px;
+
+        &__logo{
+            width: 108px;
+        }
+
+        &__phone{
+            display: none;
+        }
+
+        &__phone-img{
+            display: block;
+        }
+    }
+
+    .dropdown{
+        position: relative;
+
+        &__small{
+            display: block;
+            position: absolute;
+            top: 38px;
+            right: -20px;
+            width: 320px;
+            box-shadow: 0px 3.87px 24.99px 0px rgba(86, 97, 203, 0.31);
+            padding: 14px 20px 34px;
+            z-index: 2;
+            background-color: #FFFFFF;
+        }
+
+        &__container{
+            display: none;
+        }
+
+        &__small-header{
+            @include flex_row(space-between, center);
+        }
+
+        &__small-logo{
+            width: 108px;
+        }
+
+        &__small-input-search{
+            position: relative;
+        }
+
+        &__small-input{
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 6px;
+            border-color: $color_brand;
+            @include text_rb($size_text_medium, $weight_text_big, $height_text_medium);
+            color: $color_text_opacity;
+            margin-top: 14px;
+            margin-bottom: 40px;
+        }
+
+        &__small-loup{
+            position: absolute;
+            top: 16px;
+            left: 0;
+            padding: 10px 14px;
+        }
+
+        &__small-nav-list{
+            @include flex_column(center, flex-start);
+            gap: 26px;
+            margin-bottom: 40px;
+        }
+
+        &__small-nav-link{
+            @include text_rb($size_link_medium, $weight_link_medium, $height_link_medium);
+            color: $color_text;
+        }
+        
+        &__small-nav-buttons{
+            @include flex_column(center, center);
+            gap: 14px;
+        }
+    }
+
+}
+
+@media (max-width: 320px){
+    .header{
+        &__logo{
+            width: 108px;
+        }
+    }   
+
+    .burger{
+        &__title-text{
+            text-align: start;
+        }
+    }
+}

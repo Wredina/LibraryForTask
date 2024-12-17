@@ -1,0 +1,476 @@
+// общие стили текста для блоков Наполнение и Оснащение
+.text{
+    &__title{
+        @include subtitle();
+        color: $color_title_black_theme_standart;
+    }
+    &__paragraph{
+        @include text();
+        color: $color_text_black_theme;
+    }
+}
+
+.title-info{
+    @include title();
+    color: $color_title_black_theme_standart;
+}
+
+
+
+// стилистика всех полей инпута
+.input{
+    border: 1px solid $color_input;
+    border-radius: 12px;
+    background-color: $color_background_black_theme;
+    padding: 16px 40px;
+    font-family: "DIN 2014";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    color: $color_input;
+}
+
+
+
+// контейнер страницы товара
+.main-container{
+    background-color: $color_background_black_theme;
+    @include flex_column(flex-start,stretch);
+}
+
+// основная информация
+.item{
+    @include flex_row(space-between,stretch);
+
+// информационный блок
+    &__info{
+        padding: 0 100px 25px 70px;
+        position: relative;
+        flex-basis: 50%;
+        flex-grow: 1;
+
+
+// кнопка слайдера с номером страницы
+        &__slider{
+            background-color: $color_background_black_theme_next_page;
+            position: absolute;
+            left: 0;
+            top: 60px;
+            width: 360px;
+            @include flex_row(flex-end, center);
+            padding: 26px 46px 46px 0;
+        
+            &__num-page{
+                color: $color_text_black_theme_num_page;
+                font-family: "DIN 2014";
+                font-size: 140px;
+                font-weight: 700;
+                line-height: 120px;
+                position: absolute;
+                left: 66px;
+                bottom: -50px;
+            }
+
+            &__next-page{
+                display: flex;
+            }
+
+            &__next-page:hover path#Ellipse_136{
+                fill: $color_button_hover;
+            }
+        }
+        
+// нейминг продукта
+        &__name{
+            margin-top: 269px;
+            @include flex_column(flex-start, flex-start);
+            gap: 12px;
+
+            &__title{
+                @include title();
+                color: $color_title_black_theme_standart;
+                text-transform: uppercase;
+
+                &_accent{
+                    color: $color_title_black_theme_accent;
+                }
+            }
+
+            &__subtitle{
+                font-family: "DIN 2014";
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $color_text_black_theme;
+            }
+
+            &__text{
+                @include text();
+                color: $color_text_black_theme;
+            }
+        }
+
+// информация о размерах
+        &__size{
+            @include flex_column(flex-start,flex-start);
+            gap: 20px;
+            margin-top: 40px;
+
+            &__title{
+                font-family: "DIN 2014";
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $color_title_black_theme_standart;
+
+                &_accent{
+                    color: $color_title_black_theme_accent;
+                }
+            }
+
+            &__list{
+                @include flex_column(center,flex-start);
+                width: 100%;
+            }
+
+            &__param{
+                @include flex_row(space-between, center);
+                width: 100%;
+                padding: 12px 0 16px;
+            }
+
+            &__param:not(:last-child){
+                border-bottom: 1px solid rgba(248, 246, 242, 0.15);
+            }
+
+            &__param-title{
+                font-family: "DIN 2014";
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $color_text_black_theme;
+            }
+
+
+            &__param-text{
+                width: 50%;
+                font-family: "DIN 2014";
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                color: $color_text_black_theme;
+                margin-top: 4px;
+            }
+        }
+    }
+
+// изображение
+    &__img{
+        border-radius: 0px 0px 0px 32px;
+        flex-basis: 50%;
+        flex-grow: 1;
+        width: 50%;
+        height: auto;
+    }
+}
+
+// информация о материалах
+.materials{
+    @include flex_row(space-between,center);
+    padding: 38px 0 60px;
+// изображение
+    &__img-container{
+        width: 60%;
+    }
+
+    &__img{
+        position: relative;
+        left: -151px;
+    }
+// информационный блок
+    &__info{
+        padding-right: 50px;
+        width: 50%;
+    }
+// кнопка
+    &__info-button{
+        padding: 16px 32px;
+        background-color: $color_button_black_theme;
+        font-family: "DIN 2014";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        border-radius: 8px;
+        color: $color_button_text;
+    }
+}
+
+// блок Наполнение
+.filling{
+    width: 100%;
+    padding: 0 76px 60px 72px;
+
+    &__container{
+        @include flex_row(space-between,center);
+        gap: 36px;
+        margin-top: 8px;
+    }
+
+    &__organisation{
+        @include flex_column(flex-start,flex-start);
+        gap: 36px;
+
+        &__info{
+            @include flex_column(flex-start,flex-start);
+            gap: 12px;
+        }
+
+        &__img{
+            position: relative;
+            top: -22px;
+        }
+    }
+
+    &__img-bottom{
+        margin-top: 60px;
+    }
+}
+
+// блок Оснащение
+.equipment{
+    width: 100%;
+    padding: 0 72px 16px 76px;
+
+    &__container{
+        @include flex_row(center,center);
+        gap: 36px;
+        margin-bottom: 60px;
+    }
+
+    &__info{
+        @include flex_column(flex-start,flex-start);
+        gap: 44px;
+
+        &__text-container{
+            @include flex_column(flex-start,flex-start);
+            gap: 20px;
+        }
+
+        &__text{
+            @include flex_column(flex-start,flex-start);
+            gap: 12px;
+        }
+
+        &__list{
+            @include flex_column(flex-start,flex-start);
+            gap: 20px;
+        }
+
+        &__li{
+            background-image: url(img/icons/list-circle.svg);
+            background-repeat: no-repeat;
+            padding-left: 26px;
+            background-position: 0px 4px;
+            background-size: 14px;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+            font-family: "DIN 2014";
+            color: $color_text_black_theme;
+        } 
+    }
+
+    &__img{
+        width: 50%;
+    }
+}
+
+// форма с инпутами
+.form{
+    padding: 48px 68px 80px;
+
+    &__title{
+        @include title();
+        color: $color_title_black_theme_standart;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+
+        &_accent{
+            color: $color_title_black_theme_accent;
+        }
+    }
+
+    &__text{
+        width: 50%;
+        @include text();
+        color: $color_text_black_theme;
+        margin-bottom: 48px
+    }
+
+    &__input{
+        @include flex_row(space-between,center);
+        gap: 24px;
+
+        &__field{
+            width: 100%;
+        }
+
+        &__button{
+            width: 100%;
+            padding: 16px 32px;
+            background-color: $color_button_black_theme;
+            border-radius: 8px;
+            font-family: "DIN 2014";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            color: $color_button_text;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+@media (max-width:1220px) {
+    // основная информация, перекидывание изображения
+    .item{
+        @include flex_column(center,center);
+
+        &__info{
+
+            &__size{
+                align-items: center;
+            }
+        }
+
+        &__img{
+            width: 100%;
+        }
+    }
+
+    // материалы
+    .materials{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        &__info{
+            width: 100%;
+            padding-left: 70px;
+        }
+
+// кнопка
+        &__info-button{
+            margin-bottom: 32px;
+            width: 50%;
+            text-align: center ;
+        }
+// изображение
+        &__img-container{
+            width: 100%;
+        }
+
+        &__img{
+            left: -50px;
+        }
+    }
+
+// наполнение
+    .filling{
+        padding: 0 16px 32px;
+
+        &__organisation{
+
+            &__img-mobile{
+                display: flex;
+            }
+        }
+    }
+
+// оснащение
+    .equipment{
+        padding: 0 16px 12px;
+        
+        &__container{
+            margin-bottom: 0;
+        }
+    }
+
+// спрятанные элементы
+    .hiden-el{
+        display: none;
+    }
+// форма с инпутами
+    .form{
+        padding: 20px 16px 32px;
+
+        &__title{
+            margin-bottom: 12px;
+            font-size: 46px;
+            font-weight: 600;
+            line-height: 61px;
+        }
+
+        &__text{
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        
+        &__input{
+            @include flex_column(center,flex-start);
+        }
+    }
+
+
+}
+
+@media (max-width:768px) {
+    // основной блок
+    .item{
+        &__info{
+            padding: 0 16px;
+            // изменение размера слайдера
+            &__slider{
+                width: 100%;
+                // изменение положения номера страницы
+                &__num-page{
+                    left: 16px;
+                }
+            }
+
+            // изменение размера наименования товара
+            &__name{
+
+                &__title{
+                    font-size: 48px;
+                    font-weight: 600;
+                    line-height: 61px;
+                }
+            }
+        }
+    }
+
+    // материалы
+    .materials{
+
+        &__info{
+            padding: 0 16px;
+        }
+
+        &__info-button{
+            width: 100%;
+        }
+
+        &__img{
+            left: -16px;
+        }
+    }
+
+}

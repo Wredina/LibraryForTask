@@ -1,4 +1,7 @@
-import os
+a = 2
+b = 4
+print('result: ', a+b)
+result = a>b
+print(result)
 
-for dir_path, dir_name, file_name in os.walk(os.getcwd()):
-    print(f'{dir_path=}\n{dir_name=}\n{file_name=}\n')
+

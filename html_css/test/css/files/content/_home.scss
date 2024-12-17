@@ -1,0 +1,357 @@
+// верхний контент после шапки
+.top{
+    background-color: $brend_bg_color;
+    margin-bottom: 66px;
+
+    &__container{
+        @include flex(row, nowrap);
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+    &__img{
+        max-width: 580px;
+        display: flex;
+    }
+
+    &__heading{
+        border-left: solid 12px $brend_color;
+        padding-left: 16px;
+        min-width: 401px;
+    }
+
+    &__title{
+        @include font_text(48px, 900, 48px);
+        color: $title_color;
+    }
+
+    &__subtitle{
+        @include font_text(32px, 700, 36px);
+        color: $title_color;
+    }
+
+    &__subtitle_color{
+        color: $brend_color;
+    }
+}
+
+// секционные продукты
+.product-section{
+    @include flex(column, nowrap);
+    gap: $gap;
+    margin-bottom: 96px;
+
+    &__top{
+        @include flex(row, nowrap);
+        gap: $gap;
+    }
+
+    &__bottom{
+        display: flex;
+    }
+
+    &__cloth{
+        position: relative;
+    }
+
+    &__cloth::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(33, 22, 22, 0.7);
+    }
+
+    &__header{
+        @include flex(column,nowrap);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__subtitle{
+        @include font_text(14px, $txt_weight, $txt_height);
+        color: $dop_text_color;
+    }
+
+    &__title{
+        @include font_text(24px, 700, $txt_height);
+        color: $brend_color;
+    }
+}
+
+// блок с карточками товара + кнопка под ними
+.items{
+    @include flex(column, nowrap);
+    align-items: center;
+    margin-bottom: 96px;
+
+    &__header{
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &__title{
+        @include font_text(30px, $txt_weight, 36px);
+        color: $title_color;
+    }
+
+    &__subtitle{
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        color: $text_color;
+    }
+
+    // кнопка под карточками товара
+
+    &__button{
+        @include font_text(16px, $txt_weight, 19px);
+        padding: 14px 38px;
+        border: solid 1px $brend_color;
+        color: $brend_color;
+        display: inline-block;
+    }
+
+    &__button:hover{
+        background-color: $dop_text_color;
+        background-color: $brend_color;
+        color: $dop_text_color;
+    }
+
+}
+
+// сами карточки товара
+.products{
+    @include flex(row, wrap);
+    gap: $gap;
+    margin-bottom: 48px;
+    justify-content: center;
+    align-items: center;
+
+    &__card{
+        @include flex(column, nowrap);
+        max-width: 360px;
+        background: rgb(248, 248, 248);
+    }
+
+    &__img{
+        position: relative;
+        display: flex;
+
+        // стилизация контента ховера и его скрытие
+
+        &_hover{
+            opacity: 0;
+            top: 0;
+            left: 0;
+            @include flex(row,nowrap);
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: .3s;
+        }
+
+    }
+
+    &__link{
+        @include flex(row,nowrap);
+        align-items: center;
+        padding: 10px 14px;
+        border: solid 1px #FFFFFF;
+
+    }
+
+    &__cart{
+        width: 26px;
+    }
+
+    &__add-cart{
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        color: $dop_text_color;
+        margin-left: 11px;
+    }
+
+    // ховер и наложение фона на изображение карточки товара
+
+    &__img:hover:before{
+        content: '';
+        background-color: rgba(58, 56, 56, 0.7);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    &__img_hover:hover{
+        opacity: 1;
+    }
+
+    // описание карточки товара
+
+    &__desc{
+        padding: 20px 18px;
+    }
+
+    &__title{
+        @include font_text ($txt_size, $txt_weight, 16px);
+        color: $title_color;
+    }
+
+    &__text{
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        color: $text_color;
+        margin: 12px 0 18px 0;
+    }
+
+    &__price{
+        @include font_text(16px, $txt_weight, 19px);
+        color: $brend_color;
+    }
+}
+
+// блок с бонусами
+.bonus{
+    padding: 104px 0;
+    background-color: $bg_color;
+
+    &__container{
+        @include flex(row, nowrap);
+        gap: $gap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content{
+        text-align: center;
+        width: 360px;
+    }
+
+    &__img{
+        width: 48px;
+        height: 40px;
+    }
+
+    &__title{
+        @include font_text(20px, $txt_weight, 24px);
+        color: $dop_text_color;
+        margin: 24px 0 16px;
+    }
+
+    &__desc{
+        @include font_text($txt_size, 300, $txt_height);
+        color: $dop_text_color;
+    }
+    
+}
+
+
+
+@media (max-width: 769px) {
+    // верхний контент после шапки
+    .top{
+
+        &__container{
+            gap: 38px;
+        }
+
+        &__title{
+            @include font_text(44px, 900, 40px);
+        }
+
+        &__subtitle{
+            @include font_text(24px, 700, 30px);
+        }
+    }
+
+    // продуктовые секции
+
+    .product-section{
+        gap: 18px;
+        padding: 0 12px;
+
+        &__top{
+            gap: 18px;
+        }
+    }
+
+    // блок с карточками товара
+    .items{
+        margin-bottom: 64px;
+    }
+
+    .products{
+        gap: 16px;
+        padding: 0 6px;
+        margin-bottom: 32px;
+    }
+
+    // блок с бонусами
+    .bonus{
+        padding: 48px 0 64px;
+        
+        &__container{
+            @include flex(column,nowrap);
+        }
+
+    }
+
+}
+
+@media (max-width: 376px) {
+    // верхний контент после шапки
+    .top{
+        &__container{
+            padding: 148px 0;
+        }
+
+        &__img{
+            display: none;
+        }
+
+        &__heading {
+            margin-left: 56px;
+            min-width: 0;
+        }
+
+        &__title{
+            font-size: 38px;
+        }
+
+        &__subtitle{
+            font-size: 20px;
+        }
+
+    }
+
+    // продуктовые секции
+    .product-section{
+        gap: 32px;
+
+        &__top{
+            @include flex(column, nowrap);
+            gap: 32px;
+        }
+
+        &__bottom{
+            height: 108px;
+        }
+    }
+
+    // карточки товаров
+    .items{
+        margin-bottom: 96px;
+    }
+
+    .products{
+        margin-bottom: 40px;
+    }
+
+}

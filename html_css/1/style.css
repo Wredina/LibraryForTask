@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;  
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    color: cornflowerblue;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.title {
+    color: #222222;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.paragraph {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7d7987;
+}
+
+.title__2{
+    color: coral;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 80px;
+}
+
+.my__photo {
+    border-radius: 10px;
+    width: 100px;
+    background-color: #7d7987;
+}
+
+.about__forms {
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.about__button {
+    width: 120px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}

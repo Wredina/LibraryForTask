@@ -1,0 +1,47 @@
+@mixin flex_row($jc, $ai){
+    display: flex;
+    flex-direction: row;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin flex_column($jc, $ai){
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// 52px / 600 / 66px
+@mixin title(){
+    font-family: 'DIN 2014';
+    font-size: $size_text_xxl;
+    font-weight: $weight_text_xl;
+    line-height: $height_text_xxl;
+}
+// 24px / 400 / 24px
+@mixin subtitle(){
+    font-family: 'DIN 2014';
+    font-size: $size_text_xl;
+    font-weight: $weight_text_l;
+    line-height: $height_text_m;
+}
+// 16px / 300 / 24px
+@mixin text(){
+    font-family: 'DIN 2014';
+    font-size: $size_text_s;
+    font-weight: $weight_text_m;
+    line-height: $height_text_m;
+}
+
+@mixin button_black(){
+    padding: 16px 32px;
+    background-color: $color_button_black_theme;
+    color: $color_button_text;
+}
+
+@mixin button_white(){
+    padding: 16px 32px;
+    background-color: $color_button_white_theme;
+    color: $color_button_text;
+}

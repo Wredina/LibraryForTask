@@ -1,0 +1,73 @@
+// основные цвета
+// цвет фона
+$color_background_black_theme: #2C302F;
+$color_background_white_theme: #F5F3F4;
+$color_background_black_theme_next_page: rgba(87, 110, 92, 0.32);;
+$color_background_white_theme_next_page: rgba(165, 155, 147, 0.32);
+$color_background_black_theme_footer: #202322;
+$color_background_mobile_menu: #1D252DE6;
+// цвет кнопок
+$color_button_black_theme: #607867;
+$color_button_white_theme: #A59B93;
+$color_button_hover: #AE955F;
+$color_button_text: #F8F6F2;
+$color_button_burger: #1D252D;
+$color_button_burger_hover: #F8F6F2;
+// цвет текста
+$color_title_black_theme_accent: #A0A0A0;
+$color_title_white_theme_accent: #A59B93;
+$color_title_black_theme_standart: #F8F6F2;
+$color_title_white_theme_standart: #464646;
+$color_text_black_theme_num_page: #5F7568;
+$color_text_white_theme_num_page: #A59B93;
+$color_text_black_theme: #F8F6F2;
+$color_text_white_theme: #1D252D;
+// цвет ссылок
+$color_link: #F8F6F2;
+$color_link_hover: #AE955F;
+// рамки/линии/списки
+$color_hr: #f8f6f2;
+$color_input: #A0A0A0;
+$color_list_style_black_theme: #5F7568;
+$color_list_style_white_theme: #A59B93;
+
+// основные размеры текста
+// size: xxl=52px; xl=24px; l=20px; m=18px; s=16px; xs=14px;
+// weight: xl=600; l=400; m=300; 
+// height: xxl=66px; xl=32px; l=28px; m=24px; s=20px;
+
+// ссылки
+$size_link_l: 20px;
+$size_link_m: 18px;
+$size_link_xs: 14px;
+
+$weight_link_l: 400;
+$weight_link_m: 300;
+
+$height_link_m: 24px;
+$height_link_s: 20px;
+
+// текст
+$size_text_xxl: 52px;
+$size_text_xl: 24px;
+$size_text_l: 20px;
+$size_text_m: 18px;
+$size_text_s: 16px;
+
+$weight_text_xl: 600;
+$weight_text_l: 400;
+$weight_text_m: 300;
+
+$height_text_xxl: 66px;
+$height_text_xl: 32px;
+$height_text_l: 28px;
+$height_text_m: 24px;
+
+// кнопки
+$size_butt_xl: 24px;
+$size_butt_l: 20px;
+
+$weight_butt_l: 400;
+
+$height_butt_xl: 32px;
+$height_butt_l: 28px;

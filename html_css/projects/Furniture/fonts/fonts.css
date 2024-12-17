@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'DIN 2014';
+    src: url('DIN-2014_Light.otf') format('opentype'); 
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN 2014';
+    src: url('DIN-2014_Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN 2014';
+    src: url('DIN-2014_Demi.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN 2014';
+    src: url('DIN-2014_Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+

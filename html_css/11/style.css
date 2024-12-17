@@ -1,0 +1,651 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F2F3F7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+address{
+    font-style: normal;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+
+.header {
+    font-family: "Gilroy";
+    margin-bottom: 45px;
+}
+
+.top__header{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    margin: 25px 0 15px;
+    border-radius: 10px;
+}
+
+.phone__and__time{
+    text-align: right;
+}
+
+.bottom__header{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 25px;
+    border-radius: 10px;
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+}
+
+.head__link{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(0, 0, 0);
+}
+
+.time__works{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgb(138, 138, 138);
+}
+
+.nav__site{
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+    padding: 10px 25px;
+    background-color: #003375;
+    border-radius: 10px;
+}
+
+/* Баннер */
+
+.top__banner{
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.title{
+    position: absolute;
+    top: 103px;
+    left: 67px;
+    font-family: "Gilroy";
+    max-width: 509px;
+}
+
+.title__banner{
+    color: #FDBA4D;
+    font-family: Gilroy;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+}
+
+.subtitle__banner{
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 51px;
+    letter-spacing: 5%;
+    margin-bottom: 40px;
+}
+
+.text__banner{
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 5%;
+}
+
+/* Раздел Услуги */
+
+.service{
+    font-family: "Gilroy";
+    margin-bottom: 120px;
+}
+
+.all__title{
+    font-family: "Gilroy";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 57px;
+    color: #333333;
+}
+
+.title__service__section{
+    margin-bottom: 60px;
+}
+
+.all__nav{
+    background-color: #FFFFFF;
+    padding: 8px 25px;
+    display: inline-flex;
+    gap:10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.header__text__style {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000;
+    padding: 10px;
+}
+
+.header__text__style:hover{
+    background-color: #003375;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.actual__service{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.specification{
+    background-color: #FFFFFF;
+    border-radius: 10px 0 0 10px;
+    padding: 26px 4px;
+}
+
+.title__service{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31px;
+    color: #333333;
+    margin: 0 0 70px 20px;
+}
+
+.hr{
+    max-width: 450px;
+}
+
+.text__desc__service{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 22px 36px;
+    gap: 14px;
+}
+
+.body__text__style{
+    font-family: "Gilroy";
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 20px;
+}
+
+.body__text__style:first-child{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.img__service{
+    max-width: 682px;
+}
+
+.button__service{
+    margin-left: 22px;
+}
+
+/* Секция авто-брендов */
+
+.car__brands{
+    margin-bottom: 120px;
+}
+
+.title__car__brands{
+    margin-bottom: 48px;
+}
+
+.brands{
+    display: flex;
+    font-family: Copperplate Gothic Bold;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.all__brands{
+    display: flex;
+    gap: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #003375;
+}
+
+.second__group{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+/* Секция Преимуществ */
+
+.adv{
+    margin-bottom: 120px;
+}
+
+.adv__zone__container{
+    display: flex;
+    gap:30px;
+    font-family: Gilroy;
+}
+
+.title__adv{
+    margin-bottom: 60px;
+}
+
+.adv__img__container{
+    position: relative;
+    max-width: 556px;
+}
+
+.figcaption__adv__img{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.title__adv__img{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+
+.subtitle__adv__img{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.adv__content__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.content__zone{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.title__content__zone__adv{
+    color: #333333;
+}
+
+.small__zone{
+    max-width: 166px;
+}
+
+.big__zone{
+    max-width: 358px;
+}
+
+.title__small__zone{
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 86px;
+}
+
+.title__big__zone{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.subtitle__content__zone__adv{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* секция отделки */
+
+.trim{
+    margin-bottom: 120px;
+    font-family: "Gilroy";
+}
+
+.trim__content__container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.trim__img{
+    max-width: 652px;
+}
+
+.trim__content{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.trim__text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 46px;
+}
+
+.button__trim{
+    font-weight: 400;
+}
+
+/* Отзывы */
+
+.comment{
+    display: flex;
+    gap:32px;
+    font-family: "Gilroy";
+    margin-bottom: 120px;
+}
+
+.title__comment{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+    color: #333333;
+}
+
+.authors__and__comments__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: 846px;
+}
+
+.authors__and__comments{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 262px;
+}
+
+
+
+.text__comments{
+    padding-bottom: 16px;
+    border-bottom: solid #8A8A8A 1px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.author{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 1px;
+}
+
+.btn__comments{
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn__oppen__comments{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+/* контакты и карта */
+
+.map__contacts{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 120px;
+    justify-content: center;
+    gap: 32px;
+    font-family: "Gilroy";
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    max-width: 262px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.title__contacts{
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 45px;
+    margin-bottom: 10px;
+}
+
+.text__contacts{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    border-bottom: solid #8A8A8A 1px;
+    padding-bottom: 10px;
+}
+
+.contacts__btn{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 20px;
+}
+
+.num__tell__btn, .info__btn{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.map{
+    border: none;
+}
+
+/* футер */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    font-family: "Gilroy";
+    margin-bottom: 50px;
+}
+
+.footer__top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px 15px;
+    border-bottom: solid 1px rgb(138, 138, 138, 0.5);
+}
+
+.copy{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.footer__top__info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer__tel{
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    color: #000000;
+}
+
+.info__time__works{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #8A8A8A;
+}
+
+.footer__bottom{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__right{
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px rgb(138, 138, 138, 0.5);
+    padding: 25px;
+    justify-content: flex-end;
+}
+
+.email__phone{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__right__tel, .footer__right__mail{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.documents{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 25px 0 35px;
+}
+
+.documents__site, .dev__author{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+}
+
+.dev__author{
+    color: #8A8A8A;
+}
+
+.footer__left{
+    display: flex;
+    flex-direction: row;
+    padding: 25px 65px 25px 31px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__marks__cars{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__marks__title{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000000;
+}
+
+.footer__marks__container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.marks__car__list, .list__menu{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+}
+
+.marks__links, .link__list__menu{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000;
+}
+
+.footer__menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 20px;
+}

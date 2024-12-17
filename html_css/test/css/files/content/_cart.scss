@@ -1,0 +1,162 @@
+.cart-products{
+    @include flex(row,nowrap);
+    justify-content: space-between;
+    margin-top: 96px;
+    margin-bottom: 128px;
+    gap: 128px;
+
+    // карточки
+    &__cards{
+        @include flex(column,nowrap);
+        gap: 40px;
+    }
+
+    &__card{
+        @include flex(row,nowrap);
+        box-shadow: 4px 4px 26px 0px rgba(34, 60, 80, 0.2);
+        justify-content: space-between;
+    }
+
+    &__img-product{
+        max-width: 262px;
+    }
+
+    &__desc-container{
+        @include flex(row,nowrap);
+        justify-content: space-between;
+        gap: 92px;
+        padding: 22px;
+    }
+
+    &__desc{
+        @include flex(column,nowrap);
+        gap: 6px;
+    }
+
+    &__title-product{
+        @include font_text(24px, $txt_weight, 29px);
+        color: $title_color;
+        margin-bottom: 42px;
+    }
+
+    &__name-category{
+        @include font_text(22px, $txt_weight, 26px);
+        color: $text_color;
+    }
+
+    &__price{
+        color: $brend_color;
+        margin-left: 6px;
+    }
+
+    &__caunter-product{
+        padding: 2px 16px;
+        border: solid 1px #EAEAEA;
+        margin-left: 18px;
+    }
+
+    // кнопки под карточками
+
+    &__buttons{
+        margin-top: 32px;
+        @include flex(row, nowrap);
+        justify-content: space-between;
+    }
+
+    &__button{
+        @include font_text($txt_size, $txt_weight, $txt_height);
+        color: $text_color;
+        padding: 18px 41px;
+        border: solid 1px $text_color;
+    }
+
+    // форма
+
+    &__form{
+        @include flex(column, nowrap);
+        gap: 58px;
+        width: 360px;
+    }
+
+    &__form-address{
+        @include flex(column, nowrap);
+        gap: 20px;
+    }
+
+    &__title-form{
+        @include font_text(16px, 300, 19px);
+        color: $bg_color;
+    }
+
+    &__input{
+        padding: 16px;
+        @include font_text(13px, 300, 16px);
+        width: 100%;
+    }
+
+    &__button-form{
+        padding: 12px 14px;
+        max-width: 102px;
+        @include font_text(11px, 300, 13px);
+        color: #4A4A4A;
+        background-color: #FFFFFF;
+        border: solid 1px #A4A4A4;
+    }
+
+    // блок с финальной суммой
+    &__total{
+        background-color: #F5F3F3;
+        padding: 40px 34px;
+        @include flex(column, nowrap);
+        align-items: flex-end;
+    }
+
+    &__sub-total{
+        @include font_text(11px, 400, 13px);
+        color: $bg_color;
+    }
+
+    &__sub-final-prise{
+        margin-left: 20px;
+    }
+
+    &__grand-total{
+        @include font_text(16px, 700, 19px);
+        color: $bg_color;
+        margin: 12px 0 22px;
+    }
+
+    &__grand-final-prise{
+        color: $brend_color;
+        margin-left: 20px;
+    }
+
+    &__hr{
+        background-color: #E2E2E2;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 16px;
+    }
+
+    &__button-total{
+        padding: 16px 42px;
+        @include font_text(16px, 300, 19px);
+        color: #E2E2E2;
+        background-color: $brend_color;
+    }
+}
+
+@media (max-width: 768px) {
+        .cart-products{
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &__buttons{
+                justify-content: space-around;
+            }
+
+            &__img-delete{
+                margin: 28px 22px 0 136px;
+            }
+        }
+}

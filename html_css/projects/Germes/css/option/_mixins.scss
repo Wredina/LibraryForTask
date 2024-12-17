@@ -1,0 +1,29 @@
+@mixin text_rb($sz, $w, $h){
+    font-family: "Roboto";
+    font-size: $sz;
+    font-weight: $w;
+    line-height: $h;
+}
+
+@mixin text_sf($sz, $w, $h){
+    font-family: "M PLUS Rounded 1c";
+    font-size: $sz;
+    font-weight: $w;
+    line-height: $h;
+}
+
+@mixin flex_row($jc, $ai){
+    display: flex;
+    flex-direction: row;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin flex_column($jc, $ai){
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+ 

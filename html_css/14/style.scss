@@ -1,0 +1,18 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.sort{
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    width: 300px;
+
+    &__title{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+}

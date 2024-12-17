@@ -1,0 +1,14 @@
+// основные настройки страниц + миксины + переменные
+@import "css_files/basic";
+@import "css_files/mixins";
+@import "css_files/vars";
+
+// Хэдер и футер
+@import "css_files/header_footer/header";
+@import "css_files/header_footer/footer";
+
+// страницы
+@import "css_files/pages/01_flair";
+@import "css_files/pages/02_noa";
+@import "css_files/pages/03_iving_room_noa";
+@import "css_files/pages/04_arko";

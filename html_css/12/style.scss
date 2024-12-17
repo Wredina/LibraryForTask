@@ -1,0 +1,51 @@
+@import 'vars';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin containerStile(){
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: center;  align-items: center;
+}
+
+%fontSite{
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.container{
+    max-width: $containerWidth;
+}
+
+.container__color__text{
+    color: $colorTextSite;
+}
+
+.nav{
+    @include containerStile();
+    gap: $gapNav;
+    
+    &__link{
+        @extend %fontSite;
+        text-decoration: none;
+    }
+}
+
+.content{
+    @include containerStile();
+    gap: $gapNav;
+    
+    &__item{
+        width:calc($containerWidth / 4);
+        border: $borderColor;
+        height: 200px;
+    }
+}
+
+// text
+

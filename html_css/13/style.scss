@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.summary{
+    list-style: none;
+    &::after{
+        content: "\2192";
+    }
+}
+
+.details{
+    &[open] .summary::after{
+        content: '\2193';
+    }
+}

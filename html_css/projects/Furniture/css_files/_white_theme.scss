@@ -1,0 +1,168 @@
+.white-theme{
+    background-color: $color_background_white_theme;
+
+    &__item{
+        @include flex_row(space-between,stretch);
+
+        &__info{
+            padding: 0 100px 25px 70px;
+            position: relative;
+            flex-basis: 50%;
+            flex-grow: 1;
+    
+    
+    // кнопка слайдера с номером страницы
+            &__slider{
+                background-color: $color_background_white_theme_next_page;
+                position: absolute;
+                left: 0;
+                top: 60px;
+                width: 360px;
+                @include flex_row(flex-end, center);
+                padding: 26px 46px 46px 0;
+            
+                &__num-page{
+                    color: $color_text_white_theme_num_page;
+                    font-family: "DIN 2014";
+                    font-size: 140px;
+                    font-weight: 700;
+                    line-height: 120px;
+                    position: absolute;
+                    left: 66px;
+                    bottom: -50px;
+                }
+    
+                &__next-page{
+                    display: flex;
+                }
+    
+                &__next-page:hover path#Ellipse_136{
+                    fill: $color_button_hover;
+                }
+            }
+            
+    // нейминг продукта
+            &__name{
+                margin-top: 269px;
+                @include flex_column(flex-start, flex-start);
+                gap: 12px;
+    
+                &__title{
+                    @include title();
+                    color: $color_title_white_theme_standart;
+                    text-transform: uppercase;
+    
+                    &_accent{
+                        color: $color_title_white_theme_accent;
+                    }
+                }
+    
+                &__subtitle{
+                    font-family: "DIN 2014";
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: $color_text_white_theme;
+                }
+    
+                &__text{
+                    @include text();
+                    color: $color_text_white_theme;
+                }
+            }
+    
+    // информация о размерах
+            &__size{
+                @include flex_column(flex-start,flex-start);
+                gap: 20px;
+                margin-top: 40px;
+    
+                &__title{
+                    font-family: "DIN 2014";
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: $color_title_white_theme_standart;
+    
+                    &_accent{
+                        color: $color_title_white_theme_accent;
+                    }
+                }
+    
+                &__list{
+                    @include flex_column(center,flex-start);
+                    width: 100%;
+                }
+    
+                &__param{
+                    @include flex_row(space-between, center);
+                    width: 100%;
+                    padding: 12px 0 16px;
+                }
+    
+                &__param:not(:last-child){
+                    border-bottom: 1px solid rgba(248, 246, 242, 0.15);
+                }
+    
+                &__param-title{
+                    font-family: "DIN 2014";
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: $color_text_white_theme;
+                }
+    
+    
+                &__param-text{
+                    width: 50%;
+                    font-family: "DIN 2014";
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    color: $color_text_white_theme;
+                    margin-top: 4px;
+                }
+            }
+        }
+    
+    // изображение
+        &__img{
+            border-radius: 0px 0px 0px 32px;
+            flex-basis: 50%;
+            flex-grow: 1;
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    &__materials{
+        @include flex_row(space-between,center);
+        padding: 38px 0 60px;
+    // изображение
+        &__img-container{
+            width: 60%;
+    }
+
+    &__img{
+        position: relative;
+        left: -151px;
+    }
+// информационный блок
+    &__info{
+        padding-right: 50px;
+        width: 50%;
+    }
+// кнопка
+    &__info-button{
+        padding: 16px 32px;
+        background-color: $color_button_white_theme;
+        font-family: "DIN 2014";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        border-radius: 8px;
+        color: $color_button_text;
+    }
+    
+}
+}

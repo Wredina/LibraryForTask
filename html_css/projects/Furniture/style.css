@@ -1276,4 +1276,167 @@ address {
   .materials__img {
     left: -16px;
   }
+}
+.white-theme {
+  background-color: #F5F3F4;
+}
+.white-theme__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.white-theme__item__info {
+  padding: 0 100px 25px 70px;
+  position: relative;
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+.white-theme__item__info__slider {
+  background-color: rgba(165, 155, 147, 0.32);
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 26px 46px 46px 0;
+}
+.white-theme__item__info__slider__num-page {
+  color: #A59B93;
+  font-family: "DIN 2014";
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 120px;
+  position: absolute;
+  left: 66px;
+  bottom: -50px;
+}
+.white-theme__item__info__slider__next-page {
+  display: flex;
+}
+.white-theme__item__info__slider__next-page:hover path#Ellipse_136 {
+  fill: #AE955F;
+}
+.white-theme__item__info__name {
+  margin-top: 269px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+.white-theme__item__info__name__title {
+  font-family: "DIN 2014";
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 66px;
+  color: #464646;
+  text-transform: uppercase;
+}
+.white-theme__item__info__name__title_accent {
+  color: #A59B93;
+}
+.white-theme__item__info__name__subtitle {
+  font-family: "DIN 2014";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1D252D;
+}
+.white-theme__item__info__name__text {
+  font-family: "DIN 2014";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #1D252D;
+}
+.white-theme__item__info__size {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 40px;
+}
+.white-theme__item__info__size__title {
+  font-family: "DIN 2014";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #464646;
+}
+.white-theme__item__info__size__title_accent {
+  color: #A59B93;
+}
+.white-theme__item__info__size__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.white-theme__item__info__size__param {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0 16px;
+}
+.white-theme__item__info__size__param:not(:last-child) {
+  border-bottom: 1px solid rgba(248, 246, 242, 0.15);
+}
+.white-theme__item__info__size__param-title {
+  font-family: "DIN 2014";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #1D252D;
+}
+.white-theme__item__info__size__param-text {
+  width: 50%;
+  font-family: "DIN 2014";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #1D252D;
+  margin-top: 4px;
+}
+.white-theme__item__img {
+  border-radius: 0px 0px 0px 32px;
+  flex-basis: 50%;
+  flex-grow: 1;
+  width: 50%;
+  height: auto;
+}
+.white-theme__materials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 0 60px;
+}
+.white-theme__materials__img-container {
+  width: 60%;
+}
+.white-theme__materials__img {
+  position: relative;
+  left: -151px;
+}
+.white-theme__materials__info {
+  padding-right: 50px;
+  width: 50%;
+}
+.white-theme__materials__info-button {
+  padding: 16px 32px;
+  background-color: #A59B93;
+  font-family: "DIN 2014";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  border-radius: 8px;
+  color: #F8F6F2;
 }/*# sourceMappingURL=style.css.map */
